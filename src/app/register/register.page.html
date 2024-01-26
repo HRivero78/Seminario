@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar color="primary"> <!-- Color de fondo de la barra de navegación -->
+    <ion-title class="title">REGISTRO USUARIOS</ion-title> <!-- Aplicación de estilos al título -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <figure class="ion-text-center">
+    <ion-avatar class="center-avatar">
+      <img src="../../assets/images/Registro.jpg" alt="logo" class="logo">
+    </ion-avatar>
+  </figure>
+  <ion-grid>
+    <ion-row justify-content-center>
+      <ion-col size-md="6">
+        <form [formGroup]="registerForm" (ngSubmit)="register()">
+          <ion-item>
+            <ion-label position="floating">Email</ion-label>
+            <ion-input formControlName="email" type="email" clearInput></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Nombre</ion-label>
+            <ion-input formControlName="name" type="text" clearInput></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Apellido</ion-label>
+            <ion-input formControlName="last_name" type="text" clearInput></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Contraseña</ion-label>
+            <ion-input formControlName="password" type="password" clearInput></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Confirmar Contraseña</ion-label>
+            <ion-input formControlName="confirmation" type="password" clearInput></ion-input>
+          </ion-item>
+          <div *ngIf="registerForm?.hasError('mismatch') && (registerForm?.get('password')?.dirty || registerForm?.get('confirmation')?.dirty)">
+            <ion-text color="danger">Contraseñas no coinciden</ion-text>
+          </div>
+          <ion-row class="ion-margin-top">
+            <ion-col>
+              <ion-button type="submit" expand="full" [disabled]="!registerForm.valid" shape="round">
+                Registrarse
+              </ion-button>
+            </ion-col>
+            <ion-col>
+              <ion-button expand="full" shape="round" routerLink="/login">
+                Cancelar
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

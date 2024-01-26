@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { register } from 'swiper/element/bundle';
+import { Storage } from '@ionic/storage-angular';
 register();
 
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
@@ -11,5 +12,12 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+  constructor(private storage: Storage) {}
+
+  async ngOnInit () {
+    // if using a custom driver:
+    // await this.storage.defineDriver(MyCustomDriver)
+    await this.storage.create();
+
+  }
 }

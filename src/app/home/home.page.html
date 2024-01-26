@@ -1,80 +1,11 @@
-<!-- onboarding.page.html -->
-
-<ion-content [fullscreen]="true">
-  <swiper-container [loop]="true" [pagination]="true" [slidesPerView]="1">
-    <swiper-slide>
-      <ion-card>
-        <ion-card-header>
-          <ion-card-title class="red-title">BIENVENIDA</ion-card-title>
-        </ion-card-header>
-        <ion-card-content class="red-parrafo">
-          <p>
-            Bienvenido a nuestra aplicación de Naturaleza. Explora la belleza del mundo natural y descubre lugares asombrosos.
-          </p>
-          <ion-img src="https://img.freepik.com/fotos-premium/primer-plano-luz-sol-hermosas-flores-pradera-floreciente-fondo-borroso-ilustrador-digital_882954-25653.jpg?w=360" alt="Naturaleza 1" style="max-width: 60%; height: auto; display: block; margin: auto;"></ion-img>
-        </ion-card-content>
-      </ion-card>
-    </swiper-slide>
-
-    <swiper-slide>
-      <ion-card>
-        <ion-card-header>
-          <ion-card-title class="red-title">FLORA Y FAUNA</ion-card-title>
-        </ion-card-header>
-        <ion-card-content class="red-parrafo">
-          <p>Descubre la diversidad de la flora y fauna en nuestro planeta. Observa la vida silvestre en su entorno natural.</p>
-          <ion-img src="https://img.freepik.com/vector-gratis/conjunto-pajaros-flores_1284-7700.jpg?w=740&t=st=1706035349~exp=1706035949~hmac=aab5fa83b1f7edaf91b82ba98da290a037fbf288e3c33139617357bc6ff7a47c" alt="Naturaleza 2"></ion-img>
-        </ion-card-content>
-      </ion-card>
-    </swiper-slide>
-
-    <swiper-slide>
-      <ion-card>
-        <ion-card-header>
-          <ion-card-title class="red-title">ECOSISTEMAS ÚNICOS</ion-card-title>
-        </ion-card-header>
-        <ion-card-content class="red-parrafo">
-          <p>Explora ecosistemas únicos y descubre la importancia de conservar la biodiversidad para las generaciones futuras.</p>
-          <ion-img src="https://img.freepik.com/vector-gratis/ilustracion-plana-dia-mundial-medio-ambiente_23-2149412970.jpg?w=740&t=st=1706035158~exp=1706035758~hmac=676e1495ee66b2ecf24a10e8f1f40dada431f478db8d861ca8633d3809aa0605" alt="Naturaleza 3"></ion-img>
-        </ion-card-content>
-      </ion-card>
-    </swiper-slide>
-
-    <swiper-slide>
-      <ion-card>
-        <ion-card-header>
-          <ion-card-title class="red-title">CONSERVACIÓN</ion-card-title>
-        </ion-card-header>
-        <ion-card-content class="red-parrafo">
-          <p>Aprende sobre los esfuerzos de conservación y cómo puedes contribuir a preservar nuestro precioso entorno natural.</p>
-          <ion-img src="https://img.freepik.com/vector-gratis/dibujado-mano-gente-plantando-arbol-ilustracion_23-2149214943.jpg?w=740&t=st=1706034874~exp=1706035474~hmac=a50a4d650c9a0df54ddd13f2cc7d6202db354c98a67e51df8433d494406ba8a7" alt="Naturaleza 4"></ion-img>
-        </ion-card-content>
-      </ion-card>
-    </swiper-slide>
-
-    <swiper-slide>
-      <ion-card>
-        <ion-card-header>
-          <ion-card-title class="red-title">AVENTURA AL AIRE LIBRE</ion-card-title>
-        </ion-card-header>
-        <ion-card-content class="red-parrafo">
-          <p>Embárcate en emocionantes aventuras al aire libre y disfruta de la naturaleza en su estado más puro.</p>
-          <ion-img src="https://img.freepik.com/vector-gratis/gente-acampando-naturaleza-diseno-plano_52683-18125.jpg?w=740&t=st=1706035568~exp=1706036168~hmac=a1512039a76ef0200344f1992ea7e9c80d5b90b9bdcf9426d2d3f7bf883c233e" alt="Naturaleza 5"></ion-img>
-        </ion-card-content>
-      </ion-card>
-    </swiper-slide>
-
-    <swiper-slide>
-      <ion-card>
-        <ion-card-header>
-          <ion-card-title class="red-title">RESPONSABILIDAD AMBIENTAL</ion-card-title>
-        </ion-card-header>
-        <ion-card-content class="red-parrafo">
-          <p>Descubre la importancia de la responsabilidad ambiental y cómo cada acción cuenta para un futuro sostenible.</p>
-          <ion-img src="https://img.freepik.com/vector-gratis/dibujado-mano-dia-mundial-medio-ambiente-salva-planeta-ilustracion_52683-61570.jpg?w=740&t=st=1706034981~exp=1706035581~hmac=c318fe478e7a072e34bb7d387708728a87b4773ead1619ad5db6c0d72f3412f4" alt="Naturaleza 6"></ion-img>
-        </ion-card-content>
-      </ion-card>
-    </swiper-slide>
-
-  </swiper-container>
-</ion-content>
+<ion-content [fullscreen]="true" class="container">
+    <div class="main-content">
+      <img src="https://img.freepik.com/foto-gratis/gente-diversa-alegre-sosteniendo-iconos-musica_53876-65661.jpg?w=740&t=st=1706058321~exp=1706058921~hmac=959254637dd9ed8fb07c909079f052979a4e61198ecb7523efc7ee5cd41ce4af" alt="Imagen Llamativa" class="main-image">
+      <h1 class="main-title">Bienvenido a nuestra Plataforma de Boletas</h1>
+      <p class="main-description">
+        Descubre y adquiere boletas para una variedad de eventos emocionantes. Desde conciertos vibrantes hasta emocionantes partidos de fútbol, tenemos todo para ti.
+      </p>
+        <ion-button (click)="goToIntro()" expand="full" class="main-button">Ver Introducción</ion-button>
+    </div>
+  </ion-content>
+  

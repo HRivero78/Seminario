@@ -1,0 +1,35 @@
+.center-avatar{
+    margin: auto;
+}
+.validation-message{
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.title {
+    font-size: 24px; /* Tamaño de la fuente */
+    font-weight: bold; /* Peso de la fuente */
+    color: white; /* Color del texto */
+    text-align: center; /* Alineación del texto */
+    padding: 16px 0; /* Espaciado interno */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra de texto */
+  }
+
+  .button-style {
+    margin-top: 16px;
+    --border-radius: 25px;
+    --background: #3880ff; /* Color de fondo */
+    --background-activated: #2979ff; /* Color de fondo al presionar */
+    --background-focused: #4c8dff; /* Color de fondo al enfocar */
+    --background-hover: #4c8dff; /* Color de fondo al pasar el ratón */
+    --color: #fff; /* Color del texto */
+  }
+
+  ion-content {
+    background-color: #f0f0f0; /* Color de fondo del contenido */
+  }
+
+  form {
+  margin: 60px; /* Ajusta el tamaño del margen según tus preferencias */
+}

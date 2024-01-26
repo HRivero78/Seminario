@@ -1,20 +1,115 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+<ion-header>
+  <ion-toolbar color="primary"> <!-- Color de fondo de la barra de navegación -->
+    <ion-title class="title">BOLETAS EVENTOS</ion-title> <!-- Aplicación de estilos al título -->
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" class="container">
+  <div class="swiper-container-wrapper">
+    <swiper-container [loop]="true" [pagination]="true" [slidesPerView]="1">
+      <swiper-slide>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title class="red-title">BIENVENIDA</ion-card-title>
+          </ion-card-header>
+          <ion-card-content class="red-parrafo">
+            <p>
+              ¡Bienvenido a nuestra plataforma de venta de boletas para eventos! Explora la emoción de asistir a eventos
+              increíbles y asegura tu entrada de manera fácil y segura.
+            </p>
+            <ion-img
+              src="https://img.freepik.com/fotos-gratis/luces-de-concierto_53876-13492.jpg?size=626&ext=jpg"
+              alt="Evento 1"
+              style="max-width: 60%; height: auto; display: block; margin: auto;"
+            ></ion-img>
+            <p>Desliza para continuar...</p>
+          </ion-card-content>
+        </ion-card>
+      </swiper-slide>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+      <swiper-slide>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title class="red-title">CONCIERTOS INCREÍBLES</ion-card-title>
+          </ion-card-header>
+          <ion-card-content class="red-parrafo">
+            <p>Descubre la magia de la música en vivo. Compra tus boletas para conciertos de tus artistas favoritos.</p>
+            <ion-img
+              src="https://img.freepik.com/fotos-gratis/concierto-abstracto-con-luces-de-escenario_53876-20490.jpg?size=626&ext=jpg"
+              alt="Evento 2"
+            ></ion-img>
+            <p>Desliza para continuar...</p>
+          </ion-card-content>
+        </ion-card>
+      </swiper-slide>
+
+      <swiper-slide>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title class="red-title">CINE BAJO LAS ESTRELLAS</ion-card-title>
+          </ion-card-header>
+          <ion-card-content class="red-parrafo">
+            <p>Vive la experiencia única de ver películas al aire libre. Compra tus boletas para no perderte ningún estreno.</p>
+            <ion-img
+              src="https://img.freepik.com/fotos-gratis/gente-viendo-pelicula-al-aire-libre_53876-38441.jpg?size=626&ext=jpg"
+              alt="Evento 3"
+            ></ion-img>
+            <p>Desliza para continuar...</p>
+          </ion-card-content>
+        </ion-card>
+      </swiper-slide>
+
+      <swiper-slide>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title class="red-title">EXPERIENCIAS ÚNICAS</ion-card-title>
+          </ion-card-header>
+          <ion-card-content class="red-parrafo">
+            <p>Participa en eventos únicos y extraordinarios. Adquiere tus boletas para vivir momentos inolvidables.</p>
+            <ion-img
+              src="https://img.freepik.com/fotos-gratis/felices-amigos-brindis-cerveza-en-concierto_53876-46640.jpg?size=626&ext=jpg"
+              alt="Evento 4"
+            ></ion-img>
+            <p>Desliza para continuar...</p>
+          </ion-card-content>
+        </ion-card>
+      </swiper-slide>
+
+      <swiper-slide>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title class="red-title">TEATRO EN VIVO</ion-card-title>
+          </ion-card-header>
+          <ion-card-content class="red-parrafo">
+            <p>Disfruta de las actuaciones en vivo. Compra tus boletas para experiencias teatrales llenas de emoción.</p>
+            <ion-img
+              src="https://img.freepik.com/fotos-gratis/publico-aplaudiendo-concepto-teatro_1303-15876.jpg?size=626&ext=jpg"
+              alt="Evento 5"
+            ></ion-img>
+            <p>Desliza para continuar...</p>
+          </ion-card-content>
+        </ion-card>
+      </swiper-slide>
+
+      <swiper-slide>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title class="red-title">DEPORTES EN ACCIÓN</ion-card-title>
+          </ion-card-header>
+          <ion-card-content class="red-parrafo">
+            <p>Apoya a tu equipo favorito. Compra boletas para eventos deportivos y vive la emoción en el estadio.</p>
+            <ion-img
+              src="https://img.freepik.com/fotos-gratis/jugadores-futbol-jugando-partido_53876-64695.jpg?size=626&ext=jpg"
+              alt="Evento 6"
+            ></ion-img>
+            <p>Desliza para continuar...</p>
+          </ion-card-content>
+        </ion-card>
+      </swiper-slide>
+
+    </swiper-container>
   </div>
+  <ion-button (click)="irAlInicio()" expand="full" class="custom-button">
+    Ir al Inicio
+  </ion-button>
 </ion-content>
