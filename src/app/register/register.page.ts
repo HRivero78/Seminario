@@ -67,6 +67,7 @@ export class RegisterPage implements OnInit {
     if (this.registerForm.valid) {
       const register_data = this.registerForm.value;
       console.log(register_data);
+      
       // Aquí debes enviar los datos del formulario a tu servicio de registro
       // Ejemplo: this.authService.register(register_data);
       
@@ -91,19 +92,16 @@ export class RegisterPage implements OnInit {
     }
   }
 
-
   // Función de validación personalizada para confirmar que la contraseña y su confirmación coincidan
 matchingPasswords(formGroup: FormGroup): { [s: string]: boolean } | null {
   const passwordControl = formGroup.get('password');
   const confirmationControl = formGroup.get('confirmation');
-  
+
   if (!passwordControl || !confirmationControl) {
     return null;
   }
-
   const password = passwordControl.value;
   const confirmation = confirmationControl.value;
   return password === confirmation ? null : { mismatch: true };
 }
-
 }
