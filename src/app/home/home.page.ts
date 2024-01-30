@@ -19,7 +19,7 @@ export class HomePage implements OnInit {
 
   goToIntro() {
     console.log("Ir a la Intro")
-    this.router.navigateByUrl('/intro');
+    this.router.navigateByUrl('/login');
     this.storage.set('mostreLaIntro', true);
     };
   }

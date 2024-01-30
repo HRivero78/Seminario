@@ -66,8 +66,8 @@ export class RegisterPage implements OnInit {
   async register() {
     if (this.registerForm.valid) {
       const register_data = this.registerForm.value;
-      console.log(register_data);
-      
+      console.log("Datos del usuario registrado:", register_data); // Agregar esta línea para mostrar los datos en consola
+
       // Aquí debes enviar los datos del formulario a tu servicio de registro
       // Ejemplo: this.authService.register(register_data);
       

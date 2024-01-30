@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-events',
@@ -8,7 +9,9 @@ import { NavController } from '@ionic/angular';
 })
 export class EventsPage {
 
-  constructor(private navCtrl: NavController) {}
+  constructor(
+    private navCtrl: NavController,
+    private router: Router) {}
 
   irADeportes() {
     // Coloca aquí el código para navegar a la página de deportes
@@ -31,8 +34,8 @@ export class EventsPage {
   }
 
   irASalir() {
-    // Coloca aquí el código para navegar a la página de viajes
-    console.log('Ir a la página de viajes');
+    this.router.navigateByUrl('/home');
+    console.log('Ir a la página de inicio');
   }
 }
 
