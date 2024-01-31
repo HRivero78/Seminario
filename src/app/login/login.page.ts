@@ -64,7 +64,7 @@ export class LoginPage implements OnInit {
       console.log(res);
       this.loginMessage = res;
       this.storage.set('userLoggedIn', true)
-      this.navCtrl.navigateForward('/events');
+      this.navCtrl.navigateForward('/intro');
     }).catch(err => {
       this.loginMessage = err;
     })
