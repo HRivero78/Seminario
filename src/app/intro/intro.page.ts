@@ -25,6 +25,6 @@ export class IntroPage implements OnInit {
   irAlInicio() {
     console.log("go home"); 
     this.storage.set('mostreLaIntro', true);
-    this.router.navigateByUrl('/home');
+    this.router.navigateByUrl('/events');
   }
 }

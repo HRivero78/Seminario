@@ -8,9 +8,9 @@ import { EventsService } from '../services/events.service';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage implements OnInit {
+export class HomePage {
 
-  event_list = [];
+  event_list: any;
 
   constructor(
     private router: Router, 
@@ -26,12 +26,21 @@ export class HomePage implements OnInit {
         }
       )
       console.log("local events", this.events.getLocalEvents());
-    }
+
+    this.events.getCategories().then(categories => {
+      console.log("Categorias:",categories);
+    })
+
+    const categoryId = 1;
+    this.events.getCategoryById(categoryId).then(categoryId => {
+      console.log("Categorias:",categoryId);
+    })
+  }
 
   ngOnInit() {
     this.storage.get('mostreLaIntro').then((result) => {
       console.log('mostreLaIntro from storage:', result);
-      if (result === null) { // Si result es null, no se ha mostrado la intro
+      if (result === null) { 
         this.router.navigateByUrl('/login');
         this.storage.set('mostreLaIntro', true);
       }
@@ -43,8 +52,6 @@ export class HomePage implements OnInit {
     this.router.navigateByUrl('/login');
     this.storage.set('mostreLaIntro', true);
     };
-
-
   }
 
 

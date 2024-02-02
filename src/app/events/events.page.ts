@@ -34,7 +34,7 @@ export class EventsPage {
   }
 
   irASalir() {
-    this.router.navigateByUrl('/home');
+    this.router.navigateByUrl('menu/home');
     console.log('Ir a la página de inicio');
   }
 }

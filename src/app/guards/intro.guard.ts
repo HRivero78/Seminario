@@ -20,11 +20,7 @@ export class IntroGuard implements CanActivate {
         this.router.navigateByUrl('/intro')
         return false;
       }
-
-
     }
-
-
   }
 
  

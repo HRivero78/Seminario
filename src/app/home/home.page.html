@@ -1,18 +1,19 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-buttons slot="end">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
+    <ion-title class="title">EVENTOS</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" class="container">
-  <div class="main-content">
-    <img src="https://img.freepik.com/foto-gratis/gente-diversa-alegre-sosteniendo-iconos-musica_53876-65661.jpg?w=740&t=st=1706058321~exp=1706058921~hmac=959254637dd9ed8fb07c909079f052979a4e61198ecb7523efc7ee5cd41ce4af" alt="Imagen Llamativa" class="main-image">
-    <h1 class="main-title">Bienvenido a nuestra Plataforma de Boletas</h1>
-    <p class="main-description">
-      Descubre y adquiere boletas para una variedad de eventos emocionantes. Desde conciertos vibrantes hasta emocionantes partidos de fútbol, tenemos todo para ti.
-    </p>
-    <ion-button (click)="goToIntro()" expand="full" class="main-button">Ingresar</ion-button>
-  </div>
+<ion-content class="content">
+  <swiper-container [pagination]="true">
+    <swiper-slider *ngFor="let slide of event_list">
+      <ion-card class="slide">
+        <ion-img [src]="slide.image"></ion-img>
+      </ion-card>
+    </swiper-slider>
+  </swiper-container>
 </ion-content>
+

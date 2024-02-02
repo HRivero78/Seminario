@@ -19,4 +19,18 @@ export class EventsService {
     return dataEvents; 
   }
 
+// Método para listar categoría por ID
+  getCategories() {
+    return fetch(`${this.urlServer}/categories`).then(
+      response => response.json()
+    );
+  }
+
+  // Método para obtener detalles de una categoría específica por ID
+  getCategoryById(categoryId: number) {
+    return fetch(`${this.urlServer}/categories/${categoryId}`).then(
+      response => response.json()
+    );
+  }
+
 }
