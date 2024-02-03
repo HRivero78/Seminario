@@ -43,7 +43,7 @@ export class HomePage implements OnInit {
     this.storage.get('mostreLaIntro').then((result) => {
       console.log('mostreLaIntro from storage:', result);
       if (result === null) { 
-        this.router.navigateByUrl('/login');
+        this.router.navigateByUrl('/menu/home');
         this.storage.set('mostreLaIntro', true);
       }
     });
@@ -51,7 +51,7 @@ export class HomePage implements OnInit {
   
   goToIntro() {
     console.log("Ir a la Intro")
-    this.router.navigateByUrl('/login');
+    this.router.navigateByUrl('/menu/home');
     this.storage.set('mostreLaIntro', true);
   }
 }
