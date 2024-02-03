@@ -1,10 +1,17 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-title class="title">EVENTOS</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="menu/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="title">LISTA DE EVENTOS</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
+  <!-- Imagen centrada y ajustada -->
+  <div class="image-container">
+    <img src="assets/images/Boleta1.png" alt="Boletas">
+  </div>
   <!-- Botones para diferentes tipos de eventos -->
   <ion-grid>
     <ion-row>
@@ -30,12 +37,6 @@
         <ion-button expand="block" (click)="irAViajes()" shape="round" class="category-button">
           <ion-icon name="airplane"></ion-icon>
           <ion-label>Viajes</ion-label>
-        </ion-button>
-      </ion-col>
-      <ion-col size="12" size-md="6">
-        <ion-button expand="block" (click)="irASalir()" shape="round" class="category-button">
-          <ion-icon name="exit"></ion-icon>
-          <ion-label>Salir</ion-label>
         </ion-button>
       </ion-col>
     </ion-row>

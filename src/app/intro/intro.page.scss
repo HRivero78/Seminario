@@ -55,3 +55,44 @@
     padding: 16px 0; /* Espaciado interno */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra de texto */
   }
+
+  .content {
+    padding: 20px;
+  }
+  
+  .slide {
+    border-radius: 10px;
+  }
+  
+  .category-container {
+    margin-top: 20px;
+  }
+  
+  .category-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: blue;
+    margin-bottom: 10px;
+  }
+  
+  .category-item {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .category-item:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .footer {
+    text-align: center;
+  }
+  
+  .footer-text {
+    font-size: 14px;
+    color: gray;
+  }
+  
