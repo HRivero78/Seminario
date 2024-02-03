@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="title">CATEGORIAS</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="category-container">
+    <h2 class="category-title">Categorías</h2>
+    <ion-row class="category-row">
+      <ion-col size="6">
+        <div class="category-item-container">
+          <ion-item class="category-item" (click)="navigateToCategory('deportes')">
+            <ion-img src="assets/images/deportes.jpg"></ion-img>
+            <ion-label>Deportes</ion-label>
+          </ion-item>
+        </div>
+      </ion-col>
+      <ion-col size="6">
+        <div class="category-item-container">
+          <ion-item class="category-item" (click)="navigateToCategory('conciertos')">
+            <ion-img src="assets/images/conciertos.jpg"></ion-img>
+            <ion-label>Conciertos</ion-label>
+          </ion-item>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row class="category-row">
+      <ion-col size="6">
+        <div class="category-item-container">
+          <ion-item class="category-item" (click)="navigateToCategory('teatros')">
+            <ion-img src="assets/images/teatros.jpg"></ion-img>
+            <ion-label>Teatros - Cine</ion-label>
+          </ion-item>
+        </div>
+      </ion-col>
+      <ion-col size="6">
+        <div class="category-item-container">
+          <ion-item class="category-item" (click)="navigateToCategory('cine')">
+            <ion-img src="assets/images/turismo.jpg"></ion-img>
+            <ion-label>Turismo</ion-label>
+          </ion-item>
+        </div>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>
+

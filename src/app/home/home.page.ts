@@ -8,32 +8,34 @@ import { EventsService } from '../services/events.service';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage {
+export class HomePage implements OnInit {
 
   event_list: any;
+  categories: any;
 
   constructor(
     private router: Router, 
     private storage: Storage,
     private events: EventsService
-    ) {}
+  ) {}
 
-    ionViewDidEnter(){
-      this.events.getEvents().then(
-        res => {
-          this.event_list = res;
-          console.log("Eventos desde el servidor",this.event_list)
-        }
-      )
-      console.log("local events", this.events.getLocalEvents());
+  ionViewDidEnter() {
+    this.events.getEvents().then(
+      res => {
+        this.event_list = res;
+        console.log("Eventos desde el servidor", this.event_list)
+      }
+    )
+    console.log("local events", this.events.getLocalEvents());
 
     this.events.getCategories().then(categories => {
-      console.log("Categorias:",categories);
+      this.categories = categories;
+      console.log("Categorias:", this.categories);
     })
 
     const categoryId = 1;
     this.events.getCategoryById(categoryId).then(categoryId => {
-      console.log("Categorias:",categoryId);
+      console.log("Categorias:", categoryId);
     })
   }
 
@@ -51,7 +53,5 @@ export class HomePage {
     console.log("Ir a la Intro")
     this.router.navigateByUrl('/login');
     this.storage.set('mostreLaIntro', true);
-    };
   }
-
-
+}

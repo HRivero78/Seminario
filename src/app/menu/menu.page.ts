@@ -37,7 +37,7 @@ export class MenuPage implements OnInit {
   }
 
   categoria(){
-    this.router.navigateByUrl("/intro")
+    this.router.navigateByUrl("/categories")
   }
   
   event(){
