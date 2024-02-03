@@ -4,18 +4,45 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">events</ion-title>
-    </ion-toolbar>
-  </ion-header><br>
-
+<ion-content [fullscreen]="true" class="ion-padding">
   <!-- Botones para diferentes tipos de eventos -->
-  <ion-button expand="full" (click)="irADeportes()" shape="round" class="ion-padding-vertical">DEPORTES</ion-button>
-  <ion-button expand="full" (click)="irAConciertos()" shape="round" class="ion-padding-vertical">CONCIERTOS</ion-button>
-  <ion-button expand="full" (click)="irATeatroCine()" shape="round" class="ion-padding-vertical">TEATRO-CINE</ion-button>
-  <ion-button expand="full" (click)="irAViajes()" shape="round" class="ion-padding-vertical">VIAJES</ion-button>
-  <ion-button expand="full" (click)="irASalir()" shape="round" class="ion-padding-vertical">SALIR</ion-button>
-  
-</ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" size-md="6">
+        <ion-button expand="block" (click)="irADeportes()" shape="round" class="category-button">
+          <ion-icon name="football"></ion-icon>
+          <ion-label>Deportes</ion-label>
+        </ion-button>
+      </ion-col>
+      <ion-col size="12" size-md="6">
+        <ion-button expand="block" (click)="irAConciertos()" shape="round" class="category-button">
+          <ion-icon name="musical-notes"></ion-icon>
+          <ion-label>Conciertos</ion-label>
+        </ion-button>
+      </ion-col>
+      <ion-col size="12" size-md="6">
+        <ion-button expand="block" (click)="irATeatroCine()" shape="round" class="category-button">
+          <ion-icon name="film"></ion-icon>
+          <ion-label>Teatro-Cine</ion-label>
+        </ion-button>
+      </ion-col>
+      <ion-col size="12" size-md="6">
+        <ion-button expand="block" (click)="irAViajes()" shape="round" class="category-button">
+          <ion-icon name="airplane"></ion-icon>
+          <ion-label>Viajes</ion-label>
+        </ion-button>
+      </ion-col>
+      <ion-col size="12" size-md="6">
+        <ion-button expand="block" (click)="irASalir()" shape="round" class="category-button">
+          <ion-icon name="exit"></ion-icon>
+          <ion-label>Salir</ion-label>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  </ion-content>
+  <ion-footer>
+    <ion-toolbar color="primary">
+      <ion-title>¡Explora y descubre más eventos!</ion-title>
+    </ion-toolbar>
+  </ion-footer>
